@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: pg_repack
-# Recipe:: default
+# Recipe:: install
 #
 # Copyright (C) 2014 Chris Aumann
 #
@@ -18,4 +18,4 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-include_recipe 'pg_repack::install'
+pg_repack_install 'pg_repack'
