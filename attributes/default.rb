@@ -39,7 +39,7 @@ else
 end
 
 # Database(s) where pg_repack will be installed
-default['pg_repack']['database'] = []
+default['pg_repack']['databases'] = []
 
 # Connection information
 default['pg_repack']['connection'] = { host: '/var/run/postgresql', username: 'postgres' }

@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: pg_repack
-# Recipe:: default
+# Recipe:: create_extension
 #
 # Copyright (C) 2014 Chris Aumann
 #
@@ -18,5 +18,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-include_recipe 'pg_repack::install'
-include_recipe 'pg_repack::create_extension'
+# Create pg_repack extension on all databases specified in attributes
+Array(node['pg_repack']['databases']).each do |database|
+  pg_repack database
+end
