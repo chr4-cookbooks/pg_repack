@@ -18,4 +18,5 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+include_recipe 'build-essential'
 pg_repack_install 'pg_repack'
