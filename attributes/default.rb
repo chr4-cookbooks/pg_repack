@@ -30,14 +30,6 @@ default['pg_repack']['postgresql']['version'] = node['postgresql']['version']
 # Postgres extension path
 default['pg_repack']['postgresql']['extension_path'] = "/usr/share/postgresql/#{node['pg_repack']['postgresql']['version']}/extension"
 
-# Install --testing version of pg_repack
-# Required for postgresql-9.3
-if node['pg_repack']['postgresql']['version'].to_f >= 9.3
-  default['pg_repack']['testing'] = true
-else
-  default['pg_repack']['testing'] = false
-end
-
 # Database(s) where pg_repack will be installed
 default['pg_repack']['databases'] = []
 
