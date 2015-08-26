@@ -20,7 +20,7 @@
 
 # Package dependencies
 default['pg_repack']['dependencies'] = [
-  'pgxnclient', 'libedit-dev', 'libpam-dev',
+  'pgxnclient', 'libedit-dev', 'libpam-dev', 'libselinux1-dev',
   "postgresql-server-dev-#{node['postgresql']['version']}"
 ]
 
